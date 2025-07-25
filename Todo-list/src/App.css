@@ -11,3 +11,8 @@
   flex-direction: column;
   gap: 30px;
 }
+
+.main-layout{
+  display: flex;
+  flex-direction: row;
+}
