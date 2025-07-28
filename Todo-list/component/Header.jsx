@@ -1,7 +1,11 @@
 import React from 'react';
 import "./Header.css"
+import PropTypes from 'prop-types';
 
-const Header = () => {
+const Header = ({ todos = [] }) => {
+  const workingCount = todos.filter((todo) => !todo.isDone).length;
+  const doneCount = todos.filter((todo) => todo.isDone).length;
+
   return (
     <header className="header-container">
     <div className="Main-area">
@@ -10,11 +14,16 @@ const Header = () => {
 
     <div className='status-area'>
       <div className="status all">현황</div>
-      <div className="status working">💪 Working..! <span>0</span></div>
-      <div className="status done">🌈 Done..! <span>0</span></div>
+      <div className="status working">💪 Working..! <span>{workingCount}</span></div>
+      <div className="status done">🌈 Done..! <span>{doneCount}</span></div>
     </div>
     </header>
   )
+
 }
 
-export default Header;
+Header.propTypes = {
+  todos: PropTypes.array.isRequired,
+};
+
+export default Header; 

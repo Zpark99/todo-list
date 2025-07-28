@@ -1,37 +1,87 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 import "./TodoList.css"
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, onDelete, onWorking, onUpdate }) => {
+  const [editingId, setEditingId] = useState(null);
+  const [editTitle, setEditTitle] = useState('');
+  const [editContent, setEditContent] = useState('');
+
+  const startEditing = (todo) => {
+    setEditingId(todo.id);
+    setEditTitle(todo.title);
+    setEditContent(todo.content);
+  };
+
+  const finishEditing = () => {
+    onUpdate(editingId, editTitle, editContent);
+    setEditingId(null);
+  };
+
   return (
     <div className='todo-list-wrapper'>
-      {todos.map((todo) => {
-        console.log("todo 확인:", todo);
+      {todos.map((todo, index) => { 
+        const isEditing = editingId === todo.id;
+
         return (
           <div key={todo.id} className='todo-card'>
             <div className='card-header'>
-              <div className='status-icon'>🥎</div>
+              <div className='status-icon'>{index + 1}</div>
               <div className='icons'>
-                <span className='good'>✅</span>
-                <span className='trash'>🗑️</span>
+                <button className="icon-btn" onClick={() => onWorking(todo.id)}>
+                  {todo.isDone ? '✅' : '✔️'}
+                </button>
+                <button className="icon-btn" onClick={() => onDelete(todo.id)}>🗑️</button>
               </div>
             </div>
+        
+        {isEditing ? (
+          <>
+            <input
+              className="edit-title"
+              value={editTitle}
+              onChange={(e) => setEditTitle(e.target.value)}
+              maxLength = {23}
+            />
+            <textarea
+              className="edit-content"
+              value={editContent}
+              onChange={(e) => setEditContent(e.target.value)}
+              maxLength= {1000}
+              />
+              <button className="save-btn" onClick={finishEditing}>🫙 저장</button>
+            </>
+        ) : (
+      <div onDoubleClick={() => startEditing(todo)}>
         <div className='todo-title'>{todo.title}</div>
         <div className="todo-content">
           {todo.content.length > 30
             ? todo.content.slice(0, 30) + 
-            '...' 
-            : todo.content}
+            '...' : todo.content}
         </div>
       </div>
-        );
-      })}
+      )}
     </div>
   );
+})}
+</div>
+);
 };
 
 TodoList.propTypes = {
   todos: PropTypes.array.isRequired,
+}
+
+TodoList.propTypes = {
+  onDelete: PropTypes.func.isRequired,
+}
+
+TodoList.propTypes = {
+  onWorking: PropTypes.func.isRequired,
+}
+
+TodoList.propTypes = {
+  onUpdate: PropTypes.func.isRequired,
 }
 
 export default TodoList;
