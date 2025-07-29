@@ -53,8 +53,18 @@ const handleUpdate = (id, newtitle, newContent) => {
       <Header todos={todos}></Header>
 
     <div className='main-layout'>
+
+    <div className='Todoeditor'>
       <Todoeditor onCreate={handleCreate}/>
-      <TodoList todos={todos} onDelete={handleDelete} onWorking={handleWorking} onUpdate={handleUpdate}/>
+    </div>
+
+    <div className="Todolist">
+      <TodoList 
+        todos={todos} 
+        onDelete={handleDelete} 
+        onWorking={handleWorking} 
+        onUpdate={handleUpdate}/>
+    </div>
     </div>
   </div>  
   );

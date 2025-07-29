@@ -29,7 +29,7 @@ const TodoList = ({ todos, onDelete, onWorking, onUpdate }) => {
               <div className='status-icon'>{index + 1}</div>
               <div className='icons'>
                 <button className="icon-btn" onClick={() => onWorking(todo.id)}>
-                  {todo.isDone ? '✅' : '✔️'}
+                  {todo.isDone ? '✔️' : '✅'}
                 </button>
                 <button className="icon-btn" onClick={() => onDelete(todo.id)}>🗑️</button>
               </div>
@@ -49,15 +49,18 @@ const TodoList = ({ todos, onDelete, onWorking, onUpdate }) => {
               onChange={(e) => setEditContent(e.target.value)}
               maxLength= {1000}
               />
-              <button className="save-btn" onClick={finishEditing}>🫙 저장</button>
+              <button className="save-btn" onClick={finishEditing}>저장</button>
             </>
         ) : (
       <div onDoubleClick={() => startEditing(todo)}>
-        <div className='todo-title'>{todo.title}</div>
+        <div className='todo-title'>
+          {todo.title || '제목 없음'}
+          {todo.isDone && <span className='done-badge'> (완료)</span>}
+        </div>
         <div className="todo-content">
           {todo.content.length > 30
             ? todo.content.slice(0, 30) + 
-            '...' : todo.content}
+            '...' : todo.content || '내용 없음'}
         </div>
       </div>
       )}
@@ -70,17 +73,8 @@ const TodoList = ({ todos, onDelete, onWorking, onUpdate }) => {
 
 TodoList.propTypes = {
   todos: PropTypes.array.isRequired,
-}
-
-TodoList.propTypes = {
   onDelete: PropTypes.func.isRequired,
-}
-
-TodoList.propTypes = {
   onWorking: PropTypes.func.isRequired,
-}
-
-TodoList.propTypes = {
   onUpdate: PropTypes.func.isRequired,
 }
 

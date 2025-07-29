@@ -29,7 +29,7 @@ const Todoeditor = ({ onCreate }) => {
       <span className="text-count">{content.length} / 1000</span>
     </div>
 
-    <button type="submit">Add</button>
+    <button type="submit">ADD</button>
   </form>
   );
 };

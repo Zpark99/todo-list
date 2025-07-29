@@ -1,18 +1,41 @@
 .App {
   width: 90%; 
+  min-width: 900px;
+
   margin: 0 auto; 
   box-sizing: border-box; 
+  background: linear-gradient(to right, #e0f7f5, #f6fffd);
   padding: 20px; 
-  border: 1px solid gray; 
+  border: none; 
   border-radius: 30px;
-  margin-top: 20px;
-
+  margin-top: 20px; 
   display: flex;
+  gap:20px;
   flex-direction: column;
-  gap: 30px;
+
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .main-layout{
   display: flex;
-  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
 }
+
+.Todoeditor{
+  width:32%;
+}
+
+.Todolist{
+  width:68%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #65FFBA; /* 원하는 색상 */
+  height: 100%;
+}
+
+

@@ -1,9 +1,9 @@
 .todo-editor {
-  background-color: #2ecc71;
+  background-color: #60BD89;
   padding: 20px;
   border-radius: 15px;
   width: 300px;
-  height: 350px;
+  height: 500px;
   font-weight: 500;
   font-size: 14px;
   font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
@@ -50,7 +50,7 @@ textarea {
 }
 
 #content {
-  height: 100px;
+  height: 200px;
   resize: none;
 }
 
@@ -62,15 +62,17 @@ span.text-count {
 button {
   width: 250px;
   height: 32px;
-  background: #2ecc71;
+  background: #60BD89;
   color: white;
   border: 1px solid #2ecc71;
   border-radius: 10px;
-  margin: 10px;
+  margin: 10px auto;
   font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+
+  
 }
 
 button:hover {
