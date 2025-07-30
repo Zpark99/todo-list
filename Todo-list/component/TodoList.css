@@ -1,15 +1,16 @@
 .todo-list-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: flex-start;
   width: 100%;
-  gap: 10px;
+  gap: 16px;
 }
 
 .todo-card {
-  width: calc(50% - 10px);
-  max-width: 330px;
+  flex: 1 1 calc(50% - 10px);
+  max-width: none;
   min-height: 100px;
   background: white;
   border: 1px solid #eee;
