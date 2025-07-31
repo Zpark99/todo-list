@@ -7,18 +7,17 @@ Todo_list
 ## 제작 기간
 2025.07.14 ~ 2025.07.29
 
-## 기능 및 구조
+## 🔍 주요 기능
 
-- 할 일 추가 / 수정 / 삭제
-- Todo list 체크, 쓰레기통 표시 눌렀을때 화면 우측 현황 숫자 연동
+- ✅ 새로운 할 일 추가 기능
+- 📝 제목과 내용 입력 가능
+- 🗂️ 할 일 카드 형식으로 리스트 확인
+- ❌ 삭제 버튼을 통한 항목 제거
+- ✅ 완료 상태 표현 (향후 구현 예정이라면 표기)
 
 시연 영상
 
 ![Image](https://github.com/user-attachments/assets/50a9e95d-d812-42b1-8283-a6a4f45d22a4)
-
-## 💾 데이터 저장 방식
-- 로컬스토리지 사용  
-(※ 백엔드 연동은 없음)
 
 ## 🖥 주요 페이지 구성
 - 메인 페이지: Todo 입력, 리스트 출력
@@ -37,8 +36,21 @@ Todo_list
 ## 🛠 사용 기술 스택
 - <img src="https://img.shields.io/badge/Html5-E34F26?style=for-the-badge&logo=Html5&logoColor=white"><img src="https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=CSS&logoColor=white"><img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"><img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"><img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white">  
 
-## 🚀 설치 & 실행 방법
+## 🛠 설치 및 실행 방법
+
 ```bash
+# 1. 저장소 클론
+git clone https://github.com/Zpark99/todo-list.git
+
+# 2. 프로젝트 폴더 이동
+cd todo-list
+
+# 3. 패키지 설치
 npm install
-cd Todo-list
+
+# 4. 로컬 서버 실행
 npm run dev
+
+## 💻 배포 관련
+
+> 향후 배포 예정, 현재는 로컬 서버로 실행 가능
