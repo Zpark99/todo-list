@@ -28,8 +28,10 @@ Todo_list
 
 ※ 노트북 모니터(14인치 그램)엔 Todo card 사이즈가 맞으나
 <img width="956" height="469" alt="Image" src="https://github.com/user-attachments/assets/21b872e5-2abc-48c2-9e0d-a6f581a59a01" />
+
 -> 와이드 모니터의 경우 Todo 카드 사이즈가 안맞는 경우 발생
  <img width="852" height="345" alt="Image" src="https://github.com/user-attachments/assets/a0f95303-27a8-4815-af10-4b64397c1246" />
+
 ++ Todo-card 클릭 시 수정 창 따로 구현 필요
 
 ## 🛠 사용 기술 스택
