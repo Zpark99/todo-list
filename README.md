@@ -1,26 +1,42 @@
-# 📌 프로젝트 이름
+# 📌 프로젝트 이름 및 설명
 Todo_list
 
-## ✨ 프로젝트의 한줄 설명
-간단한 할 일 목록을 만들고 관리할 수 있는 Todo List 웹 애플리케이션.
+- 간단한 할 일 목록을 만들고 관리할 수 있는 Todo List 웹 애플리케이션.
+
+## 폴더 구조
+
+TODO-LIST/
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── Header.jsx # 상단 헤더 UI
+│ │ ├── TodoEditor.jsx # 입력 폼 컴포넌트
+│ │ ├── TodoList.jsx # 할 일 카드 렌더링
+│ │ ├── Header.css # Header 스타일
+│ │ ├── TodoEditor.css # Editor 스타일
+│ │ ├── TodoList.css # List 스타일
+│ ├── App.jsx # 앱 전체 로직 및 상태 관리
+│ ├── main.jsx # 엔트리 포인트
+│ └── index.css # 공통 스타일
+├── package.json
+└── vite.config.js
 
 ## 제작 기간
 2025.07.14 ~ 2025.07.29
 
 ## 🔍 주요 기능
 
+- 메인 페이지: Todo 입력, 리스트 출력
+
 - ✅ 새로운 할 일 추가 기능
 - 📝 제목과 내용 입력 가능
 - 🗂️ 할 일 카드 형식으로 리스트 확인
 - ❌ 삭제 버튼을 통한 항목 제거
-- ✅ 완료 상태 표현 (향후 구현 예정이라면 표기)
+- ✅ 완료 상태 표현
 
-시연 영상
+## 시연 영상
 
 ![Image](https://github.com/user-attachments/assets/50a9e95d-d812-42b1-8283-a6a4f45d22a4)
-
-## 🖥 주요 페이지 구성
-- 메인 페이지: Todo 입력, 리스트 출력
   
 ## ✔️ 리팩토링 시 추가 필요 구성
 - 모니터 크기에 따른 Todo 카드 사이즈 최적화
@@ -32,6 +48,10 @@ Todo_list
  <img width="852" height="345" alt="Image" src="https://github.com/user-attachments/assets/a0f95303-27a8-4815-af10-4b64397c1246" />
 
 ++ Todo-card 클릭 시 수정 창 따로 구현 필요
+
+## ✔️ 차후 프로젝트 진행 시 개선 사항
+- FE, BE Architecture 확립
+- 백엔드 연동
 
 ## 🛠 사용 기술 스택
 - <img src="https://img.shields.io/badge/Html5-E34F26?style=for-the-badge&logo=Html5&logoColor=white"><img src="https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=CSS&logoColor=white"><img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"><img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"><img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white">  
