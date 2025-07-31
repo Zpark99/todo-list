@@ -4,7 +4,7 @@ Todo_list
 - 간단한 할 일 목록을 만들고 관리할 수 있는 Todo List 웹 애플리케이션.
 
 ## 폴더 구조
-
+```
 TODO-LIST/
 ├── public/
 ├── src/
@@ -20,7 +20,7 @@ TODO-LIST/
 │ └── index.css # 공통 스타일
 ├── package.json
 └── vite.config.js
-
+```
 ## 제작 기간
 2025.07.14 ~ 2025.07.29
 
