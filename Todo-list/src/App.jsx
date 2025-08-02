@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // 자동차 내부 설계
+import React, { useEffect, useState } from 'react'; // 상태관리
 import "./App.css";
 import Header from '../component/Header';
 import Todoeditor from './../component/Todoeditor';

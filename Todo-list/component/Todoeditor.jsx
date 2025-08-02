@@ -2,16 +2,16 @@ import "./Todoeditor.css"
 import React, { useState } from 'react'
 import PropTypes from "prop-types";
 
-const Todoeditor = ({ onCreate }) => {
+const Todoeditor = ({ onCreate }) => { /* 할일 쓰는 입력 칸 */ 
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); /* 페이지 새로고침 방지 */
     if (!title || !content) return alert("둘 다 입력해주세요!");
     onCreate(title, content);
-    setTitle('');
-    setContent('');
+    setTitle(''); /* 입력 후에 남아 있지 말도록 비우도록 하는 함수 */ 
+    setContent(''); /* 입력 후에 남아 있지 말도록 비우도록 하는 함수 */ 
   };
 
   return (

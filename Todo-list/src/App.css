@@ -19,7 +19,7 @@
 .main-layout{
   display: flex;
   gap: 10px;
-  align-items: flex-start;
+  align-items: flex-start; /* flex 컨테이너 안의 아이템을 세로 방향을 기준으로 하고 어떻게 정렬할지 결정 */
 }
 
 .Todoeditor{
